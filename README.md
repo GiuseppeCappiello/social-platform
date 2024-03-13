@@ -50,3 +50,5 @@ in server/.env configura la variabile DATABASE_URI con l'indirizzo di collegamen
 ```
 
 Una volta fatto ciò per testare la web app vai su https://[tuo_indirizzo_ip]:5173/ 
+
+Per una migliore esperienza consiglio di visualizzare la pagina in modalità telefono dal browser.
