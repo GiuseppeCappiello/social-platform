@@ -6,10 +6,14 @@
 	import Navbar from '$lib/components/navbar.svelte';
 
 	export let data;
-	export let form;
 
-	console.log(form);
+	function handleClick(event)  {
+		const idimg = event.target.getAttribute("data-id-immagine");
+		window.location.href += `/${idimg}`;
+	}
+
 	console.log(data);
+	localStorage.setItem("utente-cercato", JSON.stringify(data.utente));
 </script>
 
 
@@ -111,9 +115,7 @@
 						<!-- svelte-ignore a11y-unknown-role -->
 						<!-- svelte-ignore a11y-click-events-have-key-events -->
 						<div
-							on:click={() => {
-								console.log('ciao');
-							}}
+							on:click={handleClick}
 							data-id-immagine={post._id}
 							class="outline outline-1 outline-black aspect-square"
 						>

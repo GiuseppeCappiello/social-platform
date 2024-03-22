@@ -4,6 +4,7 @@ import { redirect } from '@sveltejs/kit';
 /** @type {import('./$types').Actions} */
 export const actions = {
     login: async (event) => {
+        console.log("prova");
         const data = await event.request.formData();
         const obj = Object.fromEntries(data);
 

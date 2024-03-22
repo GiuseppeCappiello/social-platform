@@ -1,6 +1,10 @@
 <script>
 	// @ts-nocheck
 	export let data;
+	export let form;
+
+	console.log(form);
+	console.log(data);
 	import BottomNav from '$lib/components/NavInf/BottomNav.svelte';
 	import Post from '$lib/components/post/Post.svelte';
 	import { page } from '$app/stores';
@@ -26,6 +30,7 @@
 
 <div class="flex-1 overflow-y-auto">
 	<Post
+		id_post={data.post._id}
 		path={data.post.path}
 		username={data.username}
 		data={data.post.data_pubblicazione}
@@ -34,6 +39,7 @@
 		descrizione={data.post.descrizione}
 		handleClick={deletePost}
 		avatar_path={data.avatar_path}
+		like={data.post.liked}
 	></Post>
 </div>
 
