@@ -46,7 +46,7 @@
 						alt="immagine-profilo"
 						src={avatar_path.startsWith('https')
 							? avatar_path
-							: `https://[tuo_indirizzo_ip]/${avatar_path}`}
+							: `https://192.168.1.180/${avatar_path}`}
 					/>
 				</div>
 			</div>
@@ -108,7 +108,7 @@
 	</div>
 	<div class="h-[350px]">
 		<img
-			src={path ? `https://[tuo_indirizzo_ip]/` + path : Immagine}
+			src={path ? `https://192.168.1.180/` + path : Immagine}
 			alt="post-immagine"
 			class="object-cover h-full w-full"
 		/>

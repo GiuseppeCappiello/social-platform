@@ -25,7 +25,7 @@ export const actions = {
                 path: "/",
                 httpOnly: true,
                 sameSite: "none",
-                domain: "[tuo_indirizzo_ip]",
+                domain: "192.168.1.180",
               });
             throw redirect(303, "/private")
         }else{

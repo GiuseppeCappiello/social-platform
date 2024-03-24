@@ -76,7 +76,7 @@ async function ChangeProfilePic(event) {
             path: "/",
             httpOnly: true,
             sameSite: "strict",
-            domain: "[tuo_indirizzo_ip]",
+            domain: "192.168.1.180",
         }
 
         if (responseParse.success) {

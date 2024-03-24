@@ -11,7 +11,7 @@
 	const { id } = $page.params;
 
 	const deletePost = async () => {
-		const resJSON = await fetch(`http://[tuo_indirizzo_ip]:3000/post/api/delete/${id}`, {
+		const resJSON = await fetch(`http://192.168.1.180:3000/post/api/delete/${id}`, {
 			method: 'POST',
 			headers: {
 				Authorization: `Bearer ${data.token}`

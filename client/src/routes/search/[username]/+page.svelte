@@ -2,7 +2,6 @@
 	// @ts-nocheck
 
 	import BottomNav from '$lib/components/NavInf/BottomNav.svelte';
-	import ModalLogout from '$lib/components/modal_logout.svelte';
 	import Navbar from '$lib/components/navbar.svelte';
 
 	export let data;
@@ -19,7 +18,6 @@
 
 <main class="flex flex-col h-screen">
 	<Navbar avatar_path={data.me.avatar_path} username={data.me.username}></Navbar>
-	<ModalLogout></ModalLogout>
 	<div class="flex-1 overflow-y-auto">
 		<div class="flex p-2">
 			<div class="avatar">
@@ -28,7 +26,7 @@
 						alt="immagine-profilo"
 						src={data.utente.avatar_path.startsWith('https')
 							? data.utente.avatar_path
-							: `https://[tuo_indirizzo_ip]/${data.utente.avatar_path}`}
+							: `https://192.168.1.180/${data.utente.avatar_path}`}
 					/>
 				</div>
 			</div>
@@ -121,7 +119,7 @@
 						>
 							<img
 								data-id-immagine={post._id}
-								src={'https://[tuo_indirizzo_ip]/' + post.path}
+								src={'https://192.168.1.180/' + post.path}
 								alt="img"
 								class="aspect-square"
 							/>
